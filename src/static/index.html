@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mergington High School Activities</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .participants-section {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+      }
+      .participants-list {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 5px 0;
+        font-size: 0.9em;
+      }
+      .participants-list li {
+        padding: 2px 0;
+        color: #666;
+      }
+      .participants-heading {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #333;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -38,6 +60,22 @@
           <button type="submit">Sign Up</button>
         </form>
         <div id="message" class="hidden"></div>
+      </section>
+
+      <section id="activity-card-template">
+        <div class="activity-card">
+          <h3></h3>
+          <p class="description"></p>
+          <p class="schedule"></p>
+          <div class="participants-section">
+            <div class="participants-heading">Current Participants:</div>
+            <ul class="participants-list"></ul>
+          </div>
+          <div class="signup-section">
+            <input type="email" placeholder="Enter your email">
+            <button onclick="signUp(this)">Sign Up</button>
+          </div>
+        </div>
       </section>
     </main>
 
